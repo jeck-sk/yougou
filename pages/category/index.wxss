@@ -1,0 +1,18 @@
+/* pages/category/index.wxss */
+.haedar{
+    background:#fa2c4a; 
+  padding: 20rpx;
+} 
+.sarch{
+  width: 100%;
+  height: 60rpx;
+  line-height: 60rpx;
+  border-radius: 4px ;
+  text-align: center;
+  background: #fff;
+  font-size: 16px;
+}
+.sarch icon{
+  display: inline;
+  vertical-align: sub;
+}

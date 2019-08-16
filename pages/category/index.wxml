@@ -1,0 +1,9 @@
+<!--pages/category/index.wxml-->
+<view>
+  <view class="haedar">
+    <view class="sarch">
+      <icon type="search" size="16" />搜索
+    </view>
+  </view>
+
+  分类</view>
