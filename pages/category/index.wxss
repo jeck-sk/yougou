@@ -1,18 +1,116 @@
-/* pages/category/index.wxss */
-.haedar{
-    background:#fa2c4a; 
-  padding: 20rpx;
-} 
-.sarch{
-  width: 100%;
-  height: 60rpx;
-  line-height: 60rpx;
-  border-radius: 4px ;
-  text-align: center;
-  background: #fff;
-  font-size: 16px;
+/* * 1.固定了container的高度为100% */ 
+.container{
+  position: absolute;
+  width:100%;
+  top:100rpx;
+  bottom:0;
 }
-.sarch icon{
-  display: inline;
-  vertical-align: sub;
+
+
+.search{
+  padding:20rpx;
+  background:#ff2d4a;
+  position: fixed;
+  top:0;
+  left:0;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 99;
+}
+
+.search-input{
+  height:60rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  border-radius: 4px;
+  font-size:14px;
+  color: #666;
+}
+
+.search-input icon{
+  margin-right:10px;
+}
+.main{
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  position: relative;
+
+}
+.navs{
+  width: 200rpx;
+  height: 100%;
+   overflow: scroll;
+  background: #f4f4f4;
+  /* position: absolute;
+  left: 0;
+  top:0; */
+ 
+}
+.navs_item{
+  height: 100rpx; 
+  line-height: 100rpx;
+  text-align: center;
+}
+.navs .active{
+   color: red;
+   background: #fff;
+   position: relative;
+}
+.navs .active::before{
+   display: block;
+   content: "";
+   width: 4px;
+   height:60rpx;
+   background: red;
+   position: absolute;
+   top:20rpx;
+   left: 0;
+}
+.content{
+  position: absolute;
+  left: 220rpx;
+  flex: 1;
+  height: 100%;
+  text-align: center;
+  overflow: scroll;
+  color: #353535;
+}
+.contet_title{
+  height: 50rpx;
+  padding: 20rpx;
+}
+.clasa{
+  display: flex;
+  height: 100%;
+  flex-wrap: wrap;
+  text-align: center
+}
+.list_navs{
+  display: flex;
+  justify-content: center; 
+  justify-items: center;
+  flex-direction: column;/*切换主轴*/
+  width: 33.3%;
+  height: 100%;
+   margin-bottom:20rpx;
+}
+.list_img{
+  height: 100%;
+ 
+}
+.list_img image{
+  display: block;
+  padding: 0 20rpx;
+  width: 130rpx;
+  height: 120rpx;
+}
+.list_navs text{
+  display: block;
+  white-space: nowrap;
+  width: 150rpx;
+  overflow: hidden;
+  text-overflow: ellipsis
 }

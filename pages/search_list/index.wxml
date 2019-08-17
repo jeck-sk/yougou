@@ -1,0 +1,30 @@
+<!--pages/search_list/index.wxml-->
+<view>
+  <!-- 搜索 -->
+     <view class="search">
+    <view class="search-input">
+      <icon type="search" size="16" />搜索
+    </view>
+  </view>
+  <view class="tab">
+      <view class="tab_item {{index===current ? 'active' : ''}}" wx:for='{{["综合","销量","价格"]}}'
+      data-index="{{index}}"
+      wx:key="{{index}}"
+      bindtap="handleChange">
+          <view>{{item}}</view>
+      </view>
+  </view>
+
+
+  <view class="tab_content">
+      
+          <view class="tab_left">
+              <image src="https://img10.360buyimg.com/n7/jfs/t1/52553/18/6674/306855/5d439b73Eb31d4f42/e38462474b57a083.jpg"></image>
+          </view>
+          <view class="tab_right">
+               <text>格兰仕（Galanz）大一匹 APP智能 冷暖 节能 壁挂式 家用空调 26GW/dP11E</text>
+               <view>￥69.00</view>
+          </view>
+    
+  </view>
+</view>

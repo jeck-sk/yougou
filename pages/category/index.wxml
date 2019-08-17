@@ -1,9 +1,38 @@
 <!--pages/category/index.wxml-->
-<view>
-  <view class="haedar">
-    <view class="sarch">
+<view class="container">
+  <!-- 搜索 -->
+  <view class="search">
+    <view class="search-input">
       <icon type="search" size="16" />搜索
     </view>
   </view>
 
-  分类</view>
+  <!-- 分类页的内容 -->
+  <view class="main">
+    <view class="navs">
+      <view class="navs_item {{index === current ? 'active':''}}" wx:for='{{navs}}' wx:key='{{index}}' data-index='{{index}}' bindtap="handleChange">
+        {{item.cat_name}}
+      </view>
+    </view>
+    <view class="content">
+      <view wx:for='{{navs[current].children}}' wx:key='{{index}}'>
+        <view class="contet_title">
+          <text>/</text> {{item.cat_name}}
+          <text>/</text>
+        </view>
+        <view class="clasa" >
+            <view class="list_navs" wx:for="{{item.children}}" wx:key='{{index}}'>
+                 <view class="list_img">
+                    <image src="{{item.cat_icon}}"></image>
+                 </view> 
+                <text>{{item.cat_name}}</text>
+            </view>
+             
+        </view>
+      </view>
+
+    </view>
+  </view>
+
+
+</view>
